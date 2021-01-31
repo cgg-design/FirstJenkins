@@ -18,7 +18,9 @@ pipeline {
                 // }
                 sh "mkdir -p build"
                 dir ('build') {
+                    // run CMakeList from root folder and buid 
                     sh "cmake ../ && cmake --build ."
+                    sh "make && ./hello"
                 }   
             }
         }
