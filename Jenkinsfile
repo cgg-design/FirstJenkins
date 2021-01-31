@@ -16,10 +16,10 @@ pipeline {
                 //     // clear the containt
                 //     sh 'rm -r *'
                 // }
-                mkdir build
-                cd build
-                cmake -G "Visual Studio 14 2015 Win64" ..
-                cmake --build .     
+                sh "mkdir -p build"
+                dir ('build') {
+                    sh "cmake ../ && cmake --build ."
+                }   
             }
         }
         stage('Test') {
