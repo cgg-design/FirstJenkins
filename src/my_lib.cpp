@@ -1,13 +1,6 @@
 #include<iostream>
-#include<stdio.h>
-#include "my_lib.hpp"
+#include<string.h>
 
-int print_hello_world(){
-
-    printf("Printf: Hello World\n");
-	return 0;
+std::string print_hello_world(){
+	return "Hello World";
 }
-/* void cout_hello_world(){
-
-    std::cout << "Cout: Hello My CMake Bestpractice test" << std::endl;
-} */
